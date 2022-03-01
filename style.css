@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-margin-top: 200px;
+}
+
+
+body {
+  margin: 0;
+  background-color: rgba(172, 169, 172, 0.795);
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  scroll-margin-top: 82px;
+}
+
+/* ESTILOS DEL HEADER */
+#bars {
+  display: none;
+}
+
+.navigation {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  background-color: rgb(16, 76, 133);
+  text-align: center;
+  left: -100%;
+  transition: all .5s ease-in-out;
+}
+
+.navigation1 {
+  display: none;
+}
+
+.navigation a:hover {
+  background-color: rgba(0 0 0 / .5);
+  color: #fff;
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #000;
+  text-transform: uppercase;
+  padding: .8rem;
+}
+
+
+#bars:checked~.navigation {
+  left: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(29, 194, 216);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+
+.logotipo {
+  width: 100px;
+}
+
+.icon {
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: medium dashed black;
+}
+
+.container__cards {
+  padding: 1rem;
+}
+
+.box-mini-target {
+  position: relative;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-mini-target:hover {
+  box-shadow: 5px 5px 3px 0 rgb(68, 65, 65);
+}
+
+.img-target {
+  width: 100%;
+  height: 100%;
+}
+
+.category {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+.title-target {
+  text-transform: uppercase;
+  background-color: rgba(0 0 0 / .7);
+  color: #fff;
+  padding: .7rem;
+  border-radius: 3rem;
+}
+
+.ej-web {
+  text-decoration: none;
+  background-color: #000;
+  color: white;
+  padding: 0.8rem;
+  border-radius: .4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all .5s;
+}
+
+.ej-web:hover {
+  color: #000;
+  background-color: #fff;
+  box-shadow: 5px 5px 0 0 #000;
+}
+
+/* ASIDE */
+
+.aside {
+  text-align: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subtitle {
+  font-size: 2rem;
+  border-bottom: medium dashed #000;
+}
+
+.presentation img {
+  display: block;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttom {
+  text-decoration: none;
+  display: block;
+  width: 8rem;
+  margin-top: .5rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  background-color: #000;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: .7rem;
+  border-radius: .4rem;
+  transition: all .5s;
+}
+
+.buttom:hover {
+  color: #000;
+  background-color: #fff;
+  box-shadow: 5px 5px .3rem 0 #000;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 1024px) {
+  .icon {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation1 {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+  }
+
+  .navigation1 a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  .navigation1 a:hover {
+    background-color: rgba(0 0 0 / .5);
+    border-radius: .4rem;
+  }
+
+  .services {
+    border-radius: .4rem;
+    background-color: #000;
+  }
+
+  .container__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+.container__separate {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.aside {
+  background-color: #000;
+  position: sticky;
+  top: 80px;
+  height: 80vh;
+}
+
+
+.subtitle {
+  color: #fff;
+}
+
+.buttom {
+  background-color: #fff;
+  color: #000;
+}
+
+.target-presentation img {
+  width: 150px;
+}
+}
